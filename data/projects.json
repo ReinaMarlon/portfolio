@@ -1,0 +1,102 @@
+{
+  "plantilla_comentada": {
+    "_comentario": "JSON no soporta comentarios con // o /* */. Esta plantilla es un ejemplo valido para duplicar dentro del array projects.",
+    "id": "api-gestion-ordenes",
+    "numero": "05",
+    "destacado": true,
+    "categoria": "BACKEND API / SPRING BOOT",
+    "titulo": "API de Gestion de Ordenes con Spring Boot",
+    "descripcion_corta": "Servicio backend para centralizar ordenes, clientes, estados y contratos REST reutilizables en un flujo operativo trazable.",
+    "problema": "El flujo de ordenes dependia de pasos manuales, sin trazabilidad clara ni endpoints listos para integraciones futuras.",
+    "solucion": "Disene una API REST con capas de controlador, servicio, DTOs, validacion y persistencia relacional.",
+    "rol": "Backend Developer: contratos REST, arquitectura por capas, validacion, manejo de errores y flujo de datos.",
+    "tipo_involucramiento": "solo-dev",
+    "mostrar_proyecto": true,
+    "impacto": [
+      "Mejor trazabilidad de estados y operaciones clave.",
+      "Contratos REST reutilizables para nuevos consumidores.",
+      "Separacion clara entre reglas de negocio, persistencia y transporte."
+    ],
+    "decisiones_tecnicas": [
+      "DTOs para aislar contrato externo del modelo interno.",
+      "Validacion de requests antes de ejecutar logica de negocio.",
+      "Estructura preparada para documentacion y despliegue."
+    ],
+    "stack": ["Java", "Spring Boot", "REST API", "JPA", "SQL", "Docker"],
+    "links": {
+      "repo": "https://github.com/",
+      "sitio": "https://example.com",
+      "conversar": "#contact"
+    },
+    "mostrar_sitio": false,
+    "confidencial": false,
+    "empresa_contexto": "Proyecto independiente"
+  },
+  "translations": {
+    "en": {
+      "pretaporter-landing-page": {
+        "categoria": "BACKEND API / SPRING BOOT",
+        "titulo": "Corporate Landing Page for Prêt à Porter",
+        "descripcion_corta": "Corporate website featuring an administrative dashboard, contact management, visitor analytics, and interaction tracking.",
+        "problema": "The company lacked a modern online presence to showcase its services, centralize customer inquiries, and collect meaningful insights about visitor behavior.",
+        "solucion": "Designed and developed a full-stack web application using Spring Boot and Thymeleaf, including a responsive corporate landing page, contact form, administrative dashboard, internal analytics, and cloud deployment.",
+        "rol": "Full-Stack Developer",
+        "impacto": [
+          "Centralized customer inquiries through a unified contact system.",
+            "Implemented visitor, interaction, and social media click tracking."
+        ],
+        "decisiones_tecnicas": [
+            "Adopted a modular monolithic architecture to simplify maintenance and deployment.",
+            "Used Thymeleaf for server-side rendering to improve SEO and reduce frontend complexity.",
+            "Implemented a custom analytics module instead of relying solely on third-party tracking tools."
+        ],
+        "empresa_contexto": "Independent project"
+      }
+    }
+  },
+  "projects": [
+    {
+      "id": "pretaporter-landing-page",
+      "numero": "04",
+      "destacado": true,
+      "categoria": "FULLSTACK / JAVA / SPRING BOOT",
+      "titulo": "Landing corporativa para Prêt à Porter",
+      "descripcion_corta": "Desarrollo de una landing corporativa con panel administrativo para la gestión de contactos, métricas de interacción y seguimiento de visitantes.",
+      "problema": "La empresa no contaba con una presencia web profesional que permitiera presentar sus servicios, centralizar los canales de contacto ni obtener métricas sobre el comportamiento de los visitantes.",
+      "solucion": "Diseñé y desarrollé una aplicación web full-stack basada en Spring Boot y Thymeleaf con una landing optimizada para SEO, formulario de contacto, sistema interno de tracking, dashboard administrativo y despliegue automatizado en la nube.",
+      "rol": "Desarrollador Full Stack",
+      "tipo_involucramiento": "Freelance",
+      "mostrar_proyecto": true,
+      "impacto": [
+        "Centralización de los canales de contacto de la empresa.",
+        "Obtención de métricas de visitas, clics y formularios enviados."
+      ],
+      "decisiones_tecnicas": [
+        "Arquitectura monolítica basada en Spring Boot para simplificar mantenimiento y despliegue.",
+        "Renderizado del frontend mediante Thymeleaf para reducir complejidad y mejorar SEO.",
+        "Implementación de un sistema de tracking propio evitando dependencias de terceros."
+      ],
+      "stack": [
+        "Java 21",
+        "Spring Boot",
+        "Spring Security",
+        "Spring Data JPA",
+        "Thymeleaf",
+        "PostgreSQL",
+        "Chart.js",
+        "Maven",
+        "Git",
+        "GitHub",
+        "Render"
+      ],
+      "links": {
+        "repo": "https://github.com/",
+        "sitio": "https://example.com",
+        "conversar": "#contact"
+      },
+      "mostrar_sitio": true,
+      "confidencial": true,
+      "empresa_contexto": "Prêt à Porter"
+    }
+  ]
+}

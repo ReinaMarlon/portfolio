@@ -1,1 +1,497 @@
-<h1>Hello world</h1>
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marlon Reina | Ingeniero Backend Java & Spring Boot</title>
+    <meta name="description" content="Portafolio de Marlon Estiben Reina Dinas, ingeniero de software enfocado en Java, Spring Boot, microservicios, diseno de APIs, PHP, ASP.NET y sistemas backend empresariales.">
+    <meta name="keywords" content="Java Backend Engineer, Spring Boot Developer, Microservices, API Design, Software Engineer Colombia, PHP Developer, ASP.NET Developer">
+    <meta name="author" content="Marlon Estiben Reina Dinas">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Marlon Reina | Ingeniero Backend Java">
+    <meta property="og:description" content="Ingeniero de software que construye APIs escalables, servicios Spring Boot y sistemas backend empresariales.">
+    <meta property="og:image" content="assets/img/hero.png">
+    <meta property="og:url" content="https://reinamarlon.github.io/portfolio/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Marlon Reina | Ingeniero Backend Java">
+    <meta name="twitter:description" content="Java, Spring Boot, microservicios, diseno de APIs, PHP, ASP.NET y desarrollo de software empresarial.">
+    <meta name="twitter:image" content="assets/img/hero.png">
+
+    <link rel="canonical" href="https://reinamarlon.github.io/portfolio/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="assets/css/general.css">
+    <link rel="stylesheet" href="assets/css/hero.css">
+    <link rel="stylesheet" href="assets/css/menu.css">
+    <link rel="stylesheet" href="assets/css/aboutme.css">
+    <link rel="stylesheet" href="assets/css/experience.css">
+    <link rel="stylesheet" href="assets/css/skills.css">
+    <link rel="stylesheet" href="assets/css/projects.css">
+    <link rel="stylesheet" href="assets/css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Marlon Estiben Reina Dinas",
+            "jobTitle": "Java Backend Engineer",
+            "url": "https://reinamarlon.github.io/portfolio/",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Cali",
+                "addressCountry": "Colombia"
+            },
+            "knowsAbout": [
+                "Java",
+                "Spring Boot",
+                "Microservices",
+                "API Design",
+                "PHP",
+                "ASP.NET",
+                "JavaScript"
+            ],
+            "sameAs": [
+                "https://www.linkedin.com/",
+                "https://github.com/"
+            ]
+        }
+    </script>
+</head>
+
+<body>
+    <header class="site-header">
+        <nav class="menu menu-primary" aria-label="Primary navigation">
+            <span class="menu-progress" aria-hidden="true"></span>
+
+            <a class="menu-link active" href="#home" aria-label="Inicio" data-section="home">
+                <i class="fa-solid fa-house" aria-hidden="true"></i>
+                <small>01</small>
+                <span data-i18n="nav.home">Inicio</span>
+            </a>
+
+            <a class="menu-link" href="#about" aria-label="Sobre Marlon Reina" data-section="about">
+                <i class="fa-solid fa-user" aria-hidden="true"></i>
+                <small>02</small>
+                <span data-i18n="nav.about">Sobre mi</span>
+            </a>
+
+            <a class="menu-link" href="#experience" aria-label="Experiencia profesional" data-section="experience">
+                <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                <small>03</small>
+                <span data-i18n="nav.experience">Experiencia</span>
+            </a>
+
+            <a class="menu-link" href="#skills" aria-label="Habilidades tecnicas" data-section="skills">
+                <i class="fa-solid fa-code" aria-hidden="true"></i>
+                <small>04</small>
+                <span data-i18n="nav.skills">Skills</span>
+            </a>
+
+            <a class="menu-link" href="#projects" aria-label="Proyectos destacados" data-section="projects">
+                <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+                <small>05</small>
+                <span data-i18n="nav.projects">Proyectos</span>
+            </a>
+
+            <a class="menu-link" href="#contact" aria-label="Informacion de contacto" data-section="contact">
+                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                <small>06</small>
+                <span data-i18n="nav.contact">Contacto</span>
+            </a>
+
+        </nav>
+
+        <div class="menu menu-preferences" aria-label="Preferencias visuales">
+            <div class="language-menu">
+                <button class="menu-link language-trigger" type="button" aria-label="Cambiar idioma" aria-expanded="false">
+                    <i class="fa-solid fa-language" aria-hidden="true"></i>
+                    <small>07</small>
+                    <span data-i18n="nav.language">Idioma</span>
+                </button>
+
+                <div class="language-dropdown" role="menu" aria-label="Opciones de idioma">
+                    <button class="language-option active" type="button" data-lang="es" role="menuitem" aria-pressed="true">ES</button>
+                    <button class="language-option" type="button" data-lang="en" role="menuitem" aria-pressed="false">EN</button>
+                </div>
+            </div>
+
+            <button class="menu-link theme-toggle" type="button" aria-label="Cambiar tema" aria-pressed="false">
+                <i class="fa-solid fa-moon" aria-hidden="true"></i>
+                <small>08</small>
+                <span data-i18n="nav.theme">Tema</span>
+            </button>
+
+            <button class="menu-link accent-toggle" type="button" aria-label="Cambiar color de acento" aria-pressed="false">
+                <i class="fa-solid fa-droplet" aria-hidden="true"></i>
+                <small>09</small>
+                <span data-i18n="nav.accent">Acento</span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home" aria-labelledby="hero-title">
+            <div class="left-zone" aria-hidden="true">
+                <div class="scroll-indicator">
+                    <span class="swipe-text">Scroll</span>
+                    <div class="scroll-line">
+                        <div class="scroll-dot"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="right-zone">
+                <div class="availability-pill">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    <span data-i18n="hero.availability">Disponible para roles remotos e hibridos</span>
+                </div>
+
+                <p class="hero-kicker" data-i18n="hero.kicker">Ingeniero Backend Java / 4+ años de experiencia</p>
+                <h1 class="hero-name" id="hero-title">Marlon Estiben Reina Dinas</h1>
+                <p class="hero-skills" data-i18n="hero.description">
+                    Construyo APIs confiables con Spring Boot, microservicios e integraciones empresariales para equipos que necesitan sistemas backend que escalen con claridad.
+                </p>
+
+                <div class="hero-stack" aria-label="Primary technical stack">
+                    <span>Java</span>
+                    <span>Spring Boot</span>
+                    <span>Microservices</span>
+                    <span>API Design</span>
+                    <span>PHP</span>
+                    <span>ASP.NET</span>
+                </div>
+
+                <div class="action-buttons" aria-label="Primary actions">
+                    <a class="button button-primary" href="#contact">
+                        <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                        <span data-i18n="hero.cta.contact">Contacto</span>
+                    </a>
+                    <a class="button button-secondary" href="#contact" aria-label="Solicitar CV por contacto">
+                        <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
+                        CV
+                    </a>
+                    <a class="button button-ghost" href="#projects">
+                        <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
+                        <span data-i18n="hero.cta.projects">Proyectos</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-me" id="about" aria-labelledby="about-title">
+            <div class="about-eyebrow section-eyebrow">
+                <span data-i18n="about.eyebrow">02 / Sobre mi</span>
+                <span>Cali, Colombia - GMT-5</span>
+            </div>
+
+            <div class="about-wrapper">
+                <article class="about-card">
+                    <div class="about-header">
+                        <span class="about-badge" data-i18n="about.badge">Ingeniero de Software</span>
+                        <h2 id="about-title" data-i18n="about.title">Ingeniero Backend Java enfocado en APIs Spring Boot confiables</h2>
+                    </div>
+
+                    <div class="about-content">
+                        <div class="about-right">
+                            <p id="about-text" data-i18n-html="about.professional">
+                                Ayudo a equipos a convertir flujos de negocio en
+                                <span class="highlight">sistemas backend estables</span>:
+                                APIs con Spring Boot, modulos listos para microservicios, integraciones y codigo mantenible que otros desarrolladores pueden extender sin miedo.
+                            </p>
+
+                            <div class="tag-row" aria-label="Core technologies">
+                                <span class="tag">Java</span>
+                                <span class="tag">Spring Boot</span>
+                                <span class="tag">Microservices</span>
+                                <span class="tag">API Design</span>
+                                <span class="tag">PHP</span>
+                                <span class="tag">ASP.NET</span>
+                            </div>
+                        </div>
+
+                        <div class="about-left">
+                            <div class="stat-row">
+                                <span data-i18n="about.stat.years">Anos de experiencia</span>
+                                <h3>4+</h3>
+                            </div>
+
+                            <div class="stat-row">
+                                <span data-i18n="about.stat.projects">Proyectos</span>
+                                <h3 id="about-projects-count">0</h3>
+                            </div>
+
+                            <div class="stat-row last">
+                                <span data-i18n="about.stat.availability">Disponibilidad</span>
+                                <h3 class="small" data-i18n="about.stat.remote">Remoto</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-footer">
+                        <div class="location-pill">
+                            <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                            Cali, Valle del Cauca, Colombia
+                        </div>
+
+                        <div class="location-pill">
+                            <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                            GMT -5
+                        </div>
+                    </div>
+                </article>
+
+                <div class="about-toggle" aria-label="Selector de texto sobre Marlon">
+                    <button class="toggle-btn active" type="button" data-type="professional">
+                        <span data-i18n="about.toggle.professional">Profesional</span>
+                    </button>
+
+                    <button class="toggle-btn" type="button" data-type="personal">
+                        <span data-i18n="about.toggle.personal">Personal</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="experience" id="experience" aria-labelledby="experience-title">
+            <div class="exp-eyebrow section-eyebrow">
+                <span data-i18n="experience.eyebrow">03 / Experiencia</span>
+                <span data-i18n="experience.range">Jul 2020 - Mar 2026</span>
+            </div>
+
+            <h2 class="section-title" id="experience-title" data-i18n="experience.title">Experiencia en ingenieria de software con APIs Java, integraciones y plataformas empresariales</h2>
+
+            <div class="timeline">
+                <article class="timeline-item">
+                    <span class="timeline-dot" aria-hidden="true"></span>
+                    <div class="timeline-row">
+                        <span class="timeline-year" data-i18n-html="experience.item1.year"><span>Jul 2025</span><span>Mar 2026</span></span>
+                        <div class="timeline-content">
+                            <h3 data-i18n="experience.item1.role">Java Software Developer</h3>
+                            <p class="timeline-meta" data-i18n="experience.item1.meta">Globant - Jornada completa / Hibrido, Cali, Valle del Cauca</p>
+                            <p class="timeline-desc" data-i18n="experience.item1.desc">Desarrollo de contratos de API con enfoque contract-first, incluyendo herramientas propias para validar cumplimiento de especificaciones OpenAPI/Swagger en proyectos empresariales.</p>
+                            <ul class="timeline-impact">
+                                <li data-i18n="experience.item1.impact1">Disene un plugin de Maven personalizado para validar contratos de API JSON/YAML contra especificaciones OpenAPI/Swagger.</li>
+                                <li data-i18n="experience.item1.impact2">Aplique Java Development y practicas de ingenieria en un entorno de proyectos empresariales de gran escala.</li>
+                            </ul>
+                            <div class="timeline-tags">
+                                <span class="tag">Java</span>
+                                <span class="tag">Maven</span>
+                                <span class="tag">OpenAPI / Swagger</span>
+                                <span class="tag">REST APIs</span>
+                                <span class="tag">Spring Boot</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="timeline-item">
+                    <span class="timeline-dot" aria-hidden="true"></span>
+                    <div class="timeline-row">
+                        <span class="timeline-year" data-i18n-html="experience.item2.year"><span>Jul 2022</span><span>Jul 2024</span></span>
+                        <div class="timeline-content">
+                            <h3 data-i18n="experience.item2.role">Software Developer</h3>
+                            <p class="timeline-meta" data-i18n="experience.item2.meta">CCED - Centro de Capacitacion y Educacion Dirigida</p>
+                            <p class="timeline-desc" data-i18n="experience.item2.desc">Desarrollo end-to-end del sitio institucional y de software interno de gestion academica y financiera.</p>
+                            <ul class="timeline-impact">
+                                <li data-i18n="experience.item2.impact1">Disene e implemente el sitio web oficial de CCED con cursos, programas, informacion legal, FAQs y recursos para empresas.</li>
+                                <li data-i18n="experience.item2.impact2">Desarrolle software institucional para gestion de estudiantes, pagos, notas y asistencia.</li>
+                            </ul>
+                            <div class="timeline-tags">
+                                <span class="tag">PHP</span>
+                                <span class="tag">Web</span>
+                                <span class="tag">SQL</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="timeline-item last">
+                    <span class="timeline-dot" aria-hidden="true"></span>
+                    <div class="timeline-row">
+                        <span class="timeline-year" data-i18n-html="experience.item3.year"><span>Jul 2020</span><span>Jul 2021</span></span>
+                        <div class="timeline-content">
+                            <h3 data-i18n="experience.item3.role">Software Developer</h3>
+                            <p class="timeline-meta" data-i18n="experience.item3.meta">Omnicon</p>
+                            <p class="timeline-desc" data-i18n="experience.item3.desc">Desarrollo de multiples aplicaciones internas para gestion de contratos, talento humano e innovacion colaborativa.</p>
+                            <ul class="timeline-impact">
+                                <li data-i18n="experience.item3.impact1">Desarrolle aplicaciones para generar contratos, consultar historicos, gestionar talento humano y apoyar procesos de onboarding.</li>
+                                <li data-i18n="experience.item3.impact2">Construi plataformas internas para ideas, recompensas y seguimiento de solicitudes de nuevas aplicaciones.</li>
+                            </ul>
+                            <div class="timeline-tags">
+                                <span class="tag">ASP.NET</span>
+                                <span class="tag">Power Platform</span>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="skills" id="skills" aria-labelledby="skills-title">
+            <div class="skills-eyebrow section-eyebrow">
+                <span data-i18n="skills.eyebrow">04 / Habilidades</span>
+                <span id="skills-count" data-i18n="skills.count">18 capacidades</span>
+            </div>
+
+            <h2 class="section-title" id="skills-title" data-i18n="skills.title">Habilidades en microservicios Spring Boot e ingenieria backend</h2>
+
+            <div class="skills-grid">
+                <article class="skill-group">
+                    <div class="skill-group-header">
+                        <span class="skill-index">01</span>
+                        <h3>Backend</h3>
+                    </div>
+                    <p data-i18n="skills.backend.desc">APIs de produccion, logica de servicio, flujos de persistencia y modulos backend mantenibles.</p>
+                    <div class="skill-list">
+                        <span>Java</span>
+                        <span>Spring Boot</span>
+                        <span>Maven</span>
+                        <span>REST APIs</span>
+                        <span>PHP</span>
+                        <span>ASP.NET</span>
+                        <span>Node JS</span>
+                    </div>
+                </article>
+
+                <article class="skill-group">
+                    <div class="skill-group-header">
+                        <span class="skill-index">02</span>
+                        <h3 data-i18n="skills.arch.title">Arquitectura</h3>
+                    </div>
+                    <p data-i18n="skills.arch.desc">Pensamiento de sistemas para codebases modulares, limites de integracion y servicios listos para escalar.</p>
+                    <div class="skill-list">
+                        <span>Microservices</span>
+                        <span>API Design</span>
+                        <span>DTO Mapping</span>
+                        <span>Layered Architecture</span>
+                        <span>Clean Code</span>
+                        <span>MVC</span>
+                    </div>
+                </article>
+
+                <article class="skill-group">
+                    <div class="skill-group-header">
+                        <span class="skill-index">03</span>
+                        <h3>Frontend</h3>
+                    </div>
+                    <p data-i18n="skills.front.desc">Criterio suficiente en cliente para construir interfaces pulidas y colaborar a traves del stack.</p>
+                    <div class="skill-list">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>UX-UI Design</span>
+                        <span>GSAP</span>
+                        <span>Bootstrap 5</span>
+                    </div>
+                </article>
+
+                <article class="skill-group">
+                    <div class="skill-group-header">
+                        <span class="skill-index">04</span>
+                        <h3 data-i18n="skills.tools.title">Herramientas & Plataformas</h3>
+                    </div>
+                    <p data-i18n="skills.tools.desc">Herramientas diarias para versionamiento, contenedores, automatizacion y flujos empresariales.</p>
+                    <div class="skill-list">
+                        <span>Git</span>
+                        <span>GitHub</span>
+                        <span>BitBucket</span>
+                        <span>Jfrog</span>
+                        <span>Jira</span>
+                        <span>Docker</span>
+                        <span>Power Platform</span>
+                        <span>SQL</span>
+                        <span>PostgreSQL</span>
+                        <span>Figma</span>
+                        <span>Codex</span>
+                        <span>Copilot</span>
+                        <span>Windows</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="projects" id="projects" aria-labelledby="projects-title">
+            <div class="projects-eyebrow section-eyebrow">
+                <span data-i18n="projects.eyebrow">05 / Proyectos</span>
+                <span data-i18n="projects.subtitle">Impacto backend, no trabajo de plantilla</span>
+            </div>
+
+            <h2 class="section-title" id="projects-title" data-i18n="projects.title">Proyectos backend Java con APIs, integraciones y arquitectura pensada para produccion</h2>
+
+            <div class="projects-grid" id="projects-list" aria-live="polite">
+                <p class="projects-loading" data-i18n="projects.loading">Cargando proyectos...</p>
+            </div>
+        </section>
+
+        <section class="contact-section" id="contact" aria-labelledby="contact-title">
+            <div class="contact-eyebrow section-eyebrow">
+                <span data-i18n="contact.eyebrow">06 / Contacto</span>
+                <span data-i18n="contact.subtitle">Oportunidades remotas e hibridas</span>
+            </div>
+
+            <div class="contact-layout">
+                <div class="contact-copy">
+                    <h2 class="section-title" id="contact-title" data-i18n="contact.title">Necesitas un desarrollador backend que pueda hacerse cargo de APIs y comunicarse con claridad?</h2>
+                    <p data-i18n="contact.desc">
+                        Estoy abierto a roles Java, Spring Boot, backend, fullstack e integraciones con equipos de producto,
+                        consultoras y grupos de ingenieria que valoren una entrega limpia.
+                    </p>
+                </div>
+
+                <div class="contact-panel" aria-label="Enlaces de contacto">
+                    <a class="contact-link primary-contact" href="mailto:reinadinas.marlon@gmail.com">
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                        <span>
+                            <strong data-i18n="contact.email">Email</strong>
+                            reinadinas.marlon@gmail.com
+                        </span>
+                    </a>
+
+                    <a class="contact-link" href="https://www.linkedin.com/in/marlon-estiben-reina-dinas-250029367/" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+                        <span>
+                            <strong>LinkedIn</strong>
+                            <span data-i18n="contact.linkedin">Conectar profesionalmente</span>
+                        </span>
+                    </a>
+
+                    <a class="contact-link" href="https://github.com/ReinaMarlon/" target="_blank" rel="noopener noreferrer">
+                        <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        <span>
+                            <strong>GitHub</strong>
+                            <span data-i18n="contact.github">Revisar codigo y proyectos</span>
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-inner">
+            <div>
+                <p class="footer-name">Marlon Estiben Reina Dinas</p>
+                <p class="footer-role" data-i18n="footer.role">Desarrollador Backend Java / Spring Boot / Microservicios</p>
+            </div>
+            <div class="footer-links">
+                <a href="#home" data-i18n="footer.top">Inicio</a>
+                <a href="#projects" data-i18n="footer.projects">Proyectos</a>
+                <a href="#contact" data-i18n="footer.contact">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/projects.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/aboutme.js"></script>
+    <script src="assets/js/skills.js"></script>
+</body>
+
+</html>
