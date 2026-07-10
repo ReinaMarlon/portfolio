@@ -315,6 +315,7 @@
         right: 14px;
         justify-content: center;
         align-items: flex-end;
+        pointer-events: none;
     }
 
     .menu {
@@ -323,6 +324,7 @@
         margin-inline: auto;
         padding: 8px;
         background: rgba(5, 5, 5, 0.82);
+        pointer-events: auto;
     }
 
     :root[data-theme="light"] .menu {
@@ -335,7 +337,20 @@
     }
 
     .menu-preferences {
+        position: fixed;
+        top: 50%;
+        right: 14px;
         flex: 0 0 auto;
+        flex-direction: column;
+        transform: translateY(-50%);
+    }
+
+    .menu-preferences .menu-link,
+    .menu-preferences .language-trigger,
+    .menu-preferences.menu.is-expanded .menu-link,
+    .menu-preferences.menu.is-expanded .language-trigger {
+        flex: 0 0 auto;
+        width: var(--menu-item-size);
     }
 
     .menu::after,
@@ -394,10 +409,15 @@
         justify-content: center;
     }
 
+    .menu-preferences .language-menu {
+        flex: 0 0 auto;
+    }
+
     .language-dropdown {
         top: auto;
-        right: 0;
-        bottom: calc(100% + 12px);
+        right: calc(100% + 12px);
+        bottom: auto;
+        top: 0;
     }
 }
 

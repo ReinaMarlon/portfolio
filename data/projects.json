@@ -24,13 +24,14 @@
     ],
     "stack": ["Java", "Spring Boot", "REST API", "JPA", "SQL", "Docker"],
     "links": {
-      "repo": "https://github.com/",
-      "sitio": "https://example.com",
+      "repo": null,
+      "sitio": null,
       "conversar": "#contact"
     },
     "mostrar_sitio": false,
     "confidencial": false,
-    "empresa_contexto": "Proyecto independiente"
+    "empresa_contexto": "Proyecto independiente",
+    "empresa_url": null
   },
   "translations": {
     "en": {
@@ -50,7 +51,8 @@
             "Used Thymeleaf for server-side rendering to improve SEO and reduce frontend complexity.",
             "Implemented a custom analytics module instead of relying solely on third-party tracking tools."
         ],
-        "empresa_contexto": "Independent project"
+        "empresa_contexto": "Independent project",
+        "empresa_url": null
       }
     }
   },
@@ -90,13 +92,14 @@
         "Render"
       ],
       "links": {
-        "repo": "https://github.com/",
-        "sitio": "https://example.com",
+        "repo": null,
+        "sitio": null,
         "conversar": "#contact"
       },
-      "mostrar_sitio": true,
-      "confidencial": true,
-      "empresa_contexto": "Prêt à Porter"
+      "mostrar_sitio": false,
+      "confidencial": false,
+      "empresa_contexto": "Prêt à Porter",
+      "empresa_url": null
     }
   ]
 }

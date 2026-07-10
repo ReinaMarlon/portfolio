@@ -1,0 +1,221 @@
+{
+  "experiences": [
+    {
+      "id": "globant-java-developer",
+      "period": {
+        "start": "Jul 2025",
+        "end": "Mar 2026"
+      },
+      "company_url": "https://www.globant.com/",
+      "stack": ["Java", "Maven", "OpenAPI / Swagger", "REST APIs", "Spring Boot"],
+      "summary": {
+        "es": {
+          "role": "Desarrollador de Software",
+          "company": "Globant",
+          "description": "Desarrollo de contratos de API con enfoque contract-first, incluyendo herramientas propias para validar cumplimiento de especificaciones OpenAPI/Swagger en proyectos empresariales.",
+          "impact": [
+            "Disene un plugin de Maven personalizado para validar contratos de API JSON/YAML contra especificaciones OpenAPI/Swagger.",
+            "Aplique Java Development y practicas de ingenieria en un entorno de proyectos empresariales de gran escala."
+          ]
+        },
+        "en": {
+          "role": "Java Software Developer",
+          "company": "Globant",
+          "description": "API contract development with a contract-first approach, including internal tooling to validate OpenAPI/Swagger compliance in enterprise projects.",
+          "impact": [
+            "Designed a custom Maven plugin to validate JSON/YAML API contracts against OpenAPI/Swagger specifications.",
+            "Applied Java development and engineering practices in a large-scale enterprise project environment."
+          ]
+        }
+      },
+      "detail": {
+        "es": {
+          "title": "Contract-first API development en proyectos empresariales",
+          "intro": "Trabajo enfocado en contratos de API, calidad tecnica y herramientas internas para equipos Java.",
+          "sections": [
+            {
+              "heading": "Responsabilidades",
+              "items": [
+                "Desarrollo y validacion de contratos REST usando especificaciones OpenAPI/Swagger.",
+                "Creacion de tooling interno con Maven para automatizar revisiones de contratos JSON/YAML.",
+                "Alineacion de practicas contract-first con flujos de desarrollo empresarial."
+              ]
+            },
+            {
+              "heading": "Impacto tecnico",
+              "items": [
+                "Reduje validaciones manuales al convertir reglas de contrato en checks automatizables.",
+                "Fortaleci la consistencia entre especificaciones, implementaciones y buenas practicas de equipo."
+              ]
+            }
+          ]
+        },
+        "en": {
+          "title": "Contract-first API development for enterprise projects",
+          "intro": "Work focused on API contracts, technical quality, and internal tooling for Java teams.",
+          "sections": [
+            {
+              "heading": "Responsibilities",
+              "items": [
+                "Developed and validated REST contracts using OpenAPI/Swagger specifications.",
+                "Created internal Maven tooling to automate JSON/YAML contract reviews.",
+                "Aligned contract-first practices with enterprise development workflows."
+              ]
+            },
+            {
+              "heading": "Technical impact",
+              "items": [
+                "Reduced manual validation by turning contract rules into automatable checks.",
+                "Improved consistency between specifications, implementations, and team practices."
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "cced-it-lead",
+      "period": {
+        "start": "Jul 2022",
+        "end": "Jul 2024"
+      },
+      "company_url": null,
+      "stack": ["PHP", "Web", "SQL"],
+      "summary": {
+        "es": {
+          "role": "Desarrollador de Software",
+          "company": "CCED - Centro de Capacitacion y Educacion Dirigida",
+          "description": "Desarrollo end-to-end del sitio institucional y de software interno de gestion academica y financiera.",
+          "impact": [
+            "Disene e implemente el sitio web oficial de CCED con cursos, programas, informacion legal, FAQs y recursos para empresas.",
+            "Desarrolle software institucional para gestion de estudiantes, pagos, notas y asistencia."
+          ]
+        },
+        "en": {
+          "role": "Software Developer",
+          "company": "CCED - Directed Training and Education Center",
+          "description": "End-to-end development of the institutional website and internal academic and financial management software.",
+          "impact": [
+            "Designed and implemented CCED's official website with courses, programs, legal information, FAQs, and business resources.",
+            "Built institutional software for student management, payments, grades, and attendance."
+          ]
+        }
+      },
+      "detail": {
+        "es": {
+          "title": "Sitio institucional y plataforma academica interna",
+          "intro": "Rol con alcance end-to-end: presencia web publica, herramientas internas y soporte a procesos academicos.",
+          "sections": [
+            {
+              "heading": "Producto web",
+              "items": [
+                "Construccion del sitio institucional para publicar cursos, programas y contenido informativo.",
+                "Organizacion de informacion legal, FAQs y recursos orientados a empresas."
+              ]
+            },
+            {
+              "heading": "Software interno",
+              "items": [
+                "Gestion de estudiantes, pagos, notas y asistencia.",
+                "Flujos para que profesores registraran calificaciones y estudiantes consultaran progreso academico."
+              ]
+            }
+          ]
+        },
+        "en": {
+          "title": "Institutional website and internal academic platform",
+          "intro": "End-to-end role covering public web presence, internal tools, and academic operations.",
+          "sections": [
+            {
+              "heading": "Web product",
+              "items": [
+                "Built the institutional website to publish courses, programs, and informational content.",
+                "Organized legal information, FAQs, and business-oriented resources."
+              ]
+            },
+            {
+              "heading": "Internal software",
+              "items": [
+                "Managed students, payments, grades, and attendance flows.",
+                "Supported teachers registering grades and students checking academic progress."
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "omnicon-software-developer",
+      "period": {
+        "start": "Jul 2020",
+        "end": "Jul 2021"
+      },
+      "company_url": null,
+      "stack": ["ASP.NET", "Power Platform"],
+      "summary": {
+        "es": {
+          "role": "Desarrollador de Software",
+          "company": "Omnicon",
+          "description": "Desarrollo de multiples aplicaciones internas para gestion de contratos, talento humano e innovacion colaborativa.",
+          "impact": [
+            "Desarrolle aplicaciones para generar contratos, consultar historicos, gestionar talento humano y apoyar procesos de onboarding.",
+            "Construi plataformas internas para ideas, recompensas y seguimiento de solicitudes de nuevas aplicaciones."
+          ]
+        },
+        "en": {
+          "role": "Software Developer",
+          "company": "Omnicon",
+          "description": "Development of multiple internal applications for contract management, human talent, and collaborative innovation.",
+          "impact": [
+            "Built applications to generate contracts, view history, manage talent information, and support onboarding processes.",
+            "Built internal platforms for ideas, rewards, and tracking new internal application requests."
+          ]
+        }
+      },
+      "detail": {
+        "es": {
+          "title": "Aplicaciones internas para operaciones y colaboracion",
+          "intro": "Desarrollo de herramientas para contratos, talento humano, ideas internas y seguimiento de requerimientos.",
+          "sections": [
+            {
+              "heading": "Aplicaciones construidas",
+              "items": [
+                "Sistema de gestion de contratos para generar, consultar historicos y descargar documentos.",
+                "Aplicacion de talento humano para centralizar colaboradores y talentos potenciales.",
+                "Plataforma de ideas con estados, seguimiento y recompensas canjeables."
+              ]
+            },
+            {
+              "heading": "Gestion de solicitudes",
+              "items": [
+                "Sistema para registrar solicitudes de nuevas aplicaciones internas.",
+                "Flujos de revision con comentarios, capturas y retroalimentacion."
+              ]
+            }
+          ]
+        },
+        "en": {
+          "title": "Internal applications for operations and collaboration",
+          "intro": "Development of tools for contracts, human talent, internal ideas, and request tracking.",
+          "sections": [
+            {
+              "heading": "Applications built",
+              "items": [
+                "Contract management system to generate, view history, and download documents.",
+                "Human talent app to centralize collaborators and potential talent records.",
+                "Ideas platform with statuses, tracking, and redeemable rewards."
+              ]
+            },
+            {
+              "heading": "Request management",
+              "items": [
+                "System to register requests for new internal applications.",
+                "Review flows with comments, screenshots, and feedback."
+              ]
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

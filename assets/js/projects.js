@@ -95,6 +95,18 @@ window.addEventListener("load", async () => {
         `;
     };
 
+    const renderCompanyContext = (project, context) => {
+        if (!project.confidencial && project.empresa_url) {
+            return `
+                <a href="${escapeHtml(project.empresa_url)}" target="_blank" rel="noopener noreferrer">
+                    ${escapeHtml(context)}
+                </a>
+            `;
+        }
+
+        return `<span>${escapeHtml(context)}</span>`;
+    };
+
     const localizeProject = (project) => ({
         ...project,
         ...(projectTranslations[getLang()]?.[project.id] || {})
@@ -121,7 +133,7 @@ window.addEventListener("load", async () => {
                     <h3 id="project-${safeId}-title">${escapeHtml(project.titulo)}</h3>
                     <p>${escapeHtml(project.descripcion_corta)}</p>
                     <div class="project-context">
-                        <span>${escapeHtml(context)}</span>
+                        ${renderCompanyContext(project, context)}
                         <span>${escapeHtml(involvement)}</span>
                     </div>
                     <div class="project-stack" aria-label="Stack del proyecto">

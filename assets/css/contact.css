@@ -1,9 +1,37 @@
 .contact-section {
+    position: relative;
     width: var(--section-width);
     margin-inline: auto;
     padding: 110px 0;
     background: var(--color-bg-deep);
     color: var(--color-text);
+}
+
+.contact-section::before {
+    content: "";
+    position: absolute;
+    inset: 72px -22px 70px;
+    z-index: 0;
+    border: 1px solid rgba(var(--color-accent-rgb), 0);
+    background: rgba(var(--color-accent-rgb), 0);
+    pointer-events: none;
+    transition:
+        background 0.28s ease,
+        border-color 0.28s ease,
+        box-shadow 0.28s ease;
+}
+
+.contact-section > * {
+    position: relative;
+    z-index: 1;
+}
+
+.contact-section.is-highlighted::before {
+    border-color: rgba(var(--color-accent-rgb), 0.7);
+    background: rgba(var(--color-accent-rgb), 0.16);
+    box-shadow:
+        inset 0 0 0 1px rgba(var(--color-accent-rgb), 0.22),
+        0 0 70px rgba(var(--color-accent-rgb), 0.3);
 }
 
 .contact-eyebrow {
@@ -142,6 +170,10 @@
 @media (max-width: 900px) {
     .contact-section {
         padding: 90px 0;
+    }
+
+    .contact-section::before {
+        inset: 56px -12px 52px;
     }
 
     .contact-eyebrow {

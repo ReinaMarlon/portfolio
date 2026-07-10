@@ -2,7 +2,7 @@
 
 Live URL: https://reinamarlon.github.io/portfolio/
 
-Portfolio website for Marlon Estiben Reina Dinas, a Java Backend Engineer focused on Spring Boot APIs, microservices, integrations, and enterprise backend systems.
+Portfolio website for Marlon Estiben Reina Dinas, a Java Software Developer focused on Spring Boot APIs, microservices, integrations, and enterprise backend systems.
 
 ## Design System
 
@@ -52,7 +52,7 @@ Portfolio website for Marlon Estiben Reina Dinas, a Java Backend Engineer focuse
 ## SEO Strategy
 
 - Semantic HTML5 structure with `header`, `nav`, `main`, `section`, `article`, and `footer`.
-- Target keywords include Java Backend Engineer, Spring Boot Developer, Microservices, API Design, PHP Developer, ASP.NET Developer, and Software Engineer Colombia.
+- Target keywords include Java Software Developer, Spring Boot Developer, Microservices, API Design, PHP Developer, ASP.NET Developer, and Desarrollador de Software Colombia.
 - Meta tags include title, description, keywords, author, robots, Open Graph, Twitter card, and canonical URL.
 - Structured data uses JSON-LD `Person` schema.
 - `robots.txt` and `sitemap.xml` are included.

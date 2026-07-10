@@ -91,6 +91,20 @@ window.addEventListener("load", () => {
         menu.style.setProperty("--scroll-progress", Math.min(Math.max(progress, 0), 1).toFixed(3));
     };
 
+    const highlightContact = () => {
+        const contact = document.getElementById("contact");
+
+        if (!contact) {
+            return;
+        }
+
+        contact.classList.remove("is-highlighted");
+        window.requestAnimationFrame(() => {
+            contact.classList.add("is-highlighted");
+            window.setTimeout(() => contact.classList.remove("is-highlighted"), 1200);
+        });
+    };
+
     menus.forEach((item) => {
         item.addEventListener("pointerenter", () => setExpanded(true));
         item.addEventListener("pointermove", () => setExpanded(true));
@@ -145,6 +159,10 @@ window.addEventListener("load", () => {
             setLanguageOpen(false);
             setExpanded(false);
         });
+    });
+
+    document.querySelectorAll('.footer-links a[href="#contact"]').forEach((link) => {
+        link.addEventListener("click", highlightContact);
     });
 
     const sections = sectionLinks

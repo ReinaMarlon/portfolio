@@ -58,31 +58,67 @@ window.addEventListener("load", () => {
         }
     });
 
+    let timelineItems = [];
+    let timelineTrigger;
+    let timelineTicking = false;
+
     const syncTimelineActive = () => {
-        const items = gsap.utils.toArray(".timeline-item");
+        const items = timelineItems;
 
         if (!items.length) {
             return;
         }
 
-        const viewportCenter = window.innerHeight * 0.55;
-        const nearest = items.reduce((closest, item) => {
-            const distance = Math.abs(item.getBoundingClientRect().top - viewportCenter);
+        const activationLine = Math.min(150, window.innerHeight * 0.28);
+        const passedItems = items.filter((item) => item.getBoundingClientRect().top <= activationLine);
+        const nearest = (passedItems.length ? passedItems : [items[0]]).reduce((closest, item) => {
+            const rect = item.getBoundingClientRect();
+            const distance = Math.abs(rect.top - activationLine);
             return distance < closest.distance ? { item, distance } : closest;
         }, { item: items[0], distance: Number.POSITIVE_INFINITY }).item;
 
         items.forEach((item) => item.classList.toggle("is-active", item === nearest));
     };
 
-    ScrollTrigger.create({
-        trigger: ".timeline",
-        start: "top bottom",
-        end: "bottom top",
-        onUpdate: syncTimelineActive,
-        onEnter: syncTimelineActive,
-        onEnterBack: syncTimelineActive
-    });
+    const requestTimelineSync = () => {
+        if (timelineTicking) {
+            return;
+        }
+
+        timelineTicking = true;
+        window.requestAnimationFrame(() => {
+            syncTimelineActive();
+            timelineTicking = false;
+        });
+    };
+
+    const initTimelineState = () => {
+        timelineItems = gsap.utils.toArray(".timeline-item");
+
+        if (!timelineItems.length) {
+            return;
+        }
+
+        timelineTrigger?.kill();
+        timelineTrigger = ScrollTrigger.create({
+            trigger: ".timeline",
+            start: "top bottom",
+            end: "bottom top",
+            onUpdate: requestTimelineSync,
+            onEnter: requestTimelineSync,
+            onEnterBack: requestTimelineSync,
+            onRefresh: requestTimelineSync
+        });
+
+        ScrollTrigger.refresh();
+        syncTimelineActive();
+    };
+
+    window.addEventListener("scroll", requestTimelineSync, { passive: true });
+    window.addEventListener("resize", requestTimelineSync);
+    window.addEventListener("portfolio:languagechange", requestTimelineSync);
+    window.addEventListener("portfolio:experiencerendered", initTimelineState);
 
     ScrollTrigger.refresh();
-    syncTimelineActive();
+    initTimelineState();
 });

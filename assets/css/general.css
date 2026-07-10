@@ -134,6 +134,7 @@ body::before {
 :root[data-theme="light"] .contact-eyebrow,
 :root[data-theme="light"] .project-meta,
 :root[data-theme="light"] .project-context span,
+:root[data-theme="light"] .project-context a,
 :root[data-theme="light"] .footer-links a {
     color: rgba(15, 23, 42, 0.52);
 }
@@ -158,6 +159,7 @@ body::before {
 :root[data-theme="light"] .timeline-tags .tag,
 :root[data-theme="light"] .skill-list span,
 :root[data-theme="light"] .project-context span,
+:root[data-theme="light"] .project-context a,
 :root[data-theme="light"] .project-stack span,
 :root[data-theme="light"] .project-actions a,
 :root[data-theme="light"] .project-confidential,
