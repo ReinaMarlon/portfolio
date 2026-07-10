@@ -186,7 +186,9 @@ window.addEventListener("load", async () => {
             .filter(isVisibleProject)
             .sort((a, b) => normalizeNumber(a.numero) - normalizeNumber(b.numero));
 
-        container.innerHTML = sortedProjects.map(renderProject).join("");
+        container.innerHTML = sortedProjects.length
+            ? sortedProjects.map(renderProject).join("")
+            : `<p class="projects-loading">${t("projects.empty")}</p>`;
 
         if (window.ScrollTrigger) {
             window.ScrollTrigger.refresh();

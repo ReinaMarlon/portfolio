@@ -5,7 +5,7 @@
     overflow: hidden;
     background:
         linear-gradient(90deg, rgba(0, 0, 0, 0.52), rgba(0, 0, 0, 0.2) 42%, rgba(0, 0, 0, 0.9) 100%),
-        url("../img/hero.png") left bottom / min(58vw, 920px) auto no-repeat,
+        url("../img/hero.webp") left bottom / min(58vw, 920px) auto no-repeat,
         #000;
     display: grid;
     grid-template-columns: minmax(64px, 10vw) minmax(0, 1fr);
@@ -14,7 +14,7 @@
 :root[data-theme="light"] .hero {
     background:
         linear-gradient(90deg, rgba(248, 250, 252, 0.08), rgba(248, 250, 252, 0.4) 42%, rgba(248, 250, 252, 0.96) 100%),
-        url("../img/hero-light.png") left bottom / min(58vw, 920px) auto no-repeat,
+        url("../img/hero-light.webp") left bottom / min(58vw, 920px) auto no-repeat,
         #f8fafc;
 }
 
@@ -273,7 +273,7 @@
         background:
             linear-gradient(90deg, rgba(0, 0, 0, 0.32), rgba(0, 0, 0, 0.62)),
             linear-gradient(180deg, rgba(0, 0, 0, 0.08), rgba(0, 0, 0, 0.7) 48%, #000 100%),
-            url("../img/hero.png") center bottom / min(104vw, 620px) auto no-repeat,
+            url("../img/hero.webp") center bottom / min(104vw, 620px) auto no-repeat,
             #000;
     }
 
@@ -281,7 +281,7 @@
         background:
             linear-gradient(90deg, rgba(248, 250, 252, 0.18), rgba(248, 250, 252, 0.62)),
             linear-gradient(180deg, rgba(248, 250, 252, 0.08), rgba(248, 250, 252, 0.74) 48%, #f8fafc 100%),
-            url("../img/hero-light.png") center bottom / min(104vw, 620px) auto no-repeat,
+            url("../img/hero-light.webp") center bottom / min(104vw, 620px) auto no-repeat,
             #f8fafc;
     }
 
@@ -317,7 +317,7 @@
         background:
             linear-gradient(90deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.68)),
             linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.72) 46%, #000 100%),
-            url("../img/hero.png") center 64% / 128vw auto no-repeat,
+            url("../img/hero.webp") center 64% / 128vw auto no-repeat,
             #000;
     }
 
@@ -325,7 +325,7 @@
         background:
             linear-gradient(90deg, rgba(248, 250, 252, 0.16), rgba(248, 250, 252, 0.72)),
             linear-gradient(180deg, rgba(248, 250, 252, 0.02), rgba(248, 250, 252, 0.76) 46%, #f8fafc 100%),
-            url("../img/hero-light.png") center 64% / 128vw auto no-repeat,
+            url("../img/hero-light.webp") center 64% / 128vw auto no-repeat,
             #f8fafc;
     }
 

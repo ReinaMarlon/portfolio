@@ -27,6 +27,11 @@
     <meta name="twitter:image:alt" content="Marlon Reina, desarrollador de software Java. Ver portafolio.">
 
     <link rel="canonical" href="https://reinamarlon.github.io/portfolio/">
+    <link rel="icon" href="assets/img/favicon.ico" sizes="any">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png">
+    <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+    <link rel="preload" as="image" href="assets/img/hero.webp" type="image/webp">
+    <link rel="preload" as="image" href="assets/img/hero-light.webp" type="image/webp">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="assets/css/general.css">
@@ -69,6 +74,14 @@
 </head>
 
 <body>
+    <div class="load-screen" aria-hidden="true">
+        <div class="load-console">
+            <span class="load-prompt">portfolio.init()</span>
+            <strong>Marlon Reina</strong>
+            <span class="load-path">Java / Spring Boot / APIs</span>
+        </div>
+    </div>
+
     <header class="site-header">
         <nav class="menu menu-primary" aria-label="Primary navigation">
             <span class="menu-progress" aria-hidden="true"></span>
@@ -429,6 +442,7 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="assets/js/loader.js"></script>
     <script src="assets/js/i18n.js"></script>
     <script src="assets/js/menu.js"></script>
     <script src="assets/js/experience.js"></script>

@@ -68,7 +68,7 @@
       "solucion": "Diseñé y desarrollé una aplicación web full-stack basada en Spring Boot y Thymeleaf con una landing optimizada para SEO, formulario de contacto, sistema interno de tracking, dashboard administrativo y despliegue automatizado en la nube.",
       "rol": "Desarrollador Full Stack",
       "tipo_involucramiento": "Freelance",
-      "mostrar_proyecto": true,
+      "mostrar_proyecto": false,
       "impacto": [
         "Centralización de los canales de contacto de la empresa.",
         "Obtención de métricas de visitas, clics y formularios enviados."

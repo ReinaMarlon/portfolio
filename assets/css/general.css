@@ -62,6 +62,98 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+.load-screen {
+    position: fixed;
+    inset: 0;
+    z-index: 5000;
+    display: grid;
+    place-items: center;
+    background: var(--color-bg-deep);
+    color: var(--color-text);
+    transition:
+        opacity 0.55s var(--ease-standard),
+        visibility 0.55s var(--ease-standard);
+}
+
+.load-screen::before {
+    content: "";
+    position: absolute;
+    inset: 12%;
+    border: 1px solid rgba(var(--color-accent-rgb), 0.28);
+    opacity: 0.7;
+    transform: skewX(-8deg);
+    animation: loadFrame 1.35s var(--ease-standard) infinite alternate;
+}
+
+.load-console {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    gap: 12px;
+    min-width: min(78vw, 560px);
+    border-left: 2px solid var(--color-accent);
+    padding: 22px 0 22px 24px;
+    font-family: var(--font-display);
+}
+
+.load-console::after {
+    content: "";
+    width: 12px;
+    height: 1.15em;
+    background: var(--color-accent);
+    animation: loadCursor 0.7s steps(2, end) infinite;
+}
+
+.load-prompt,
+.load-path {
+    color: var(--color-muted);
+    font-size: clamp(0.82rem, 2.4vw, 1rem);
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.load-console strong {
+    color: var(--color-text);
+    font-size: clamp(2.8rem, 10vw, 6.8rem);
+    font-style: italic;
+    font-weight: 300;
+    line-height: 0.9;
+    animation: loadName 0.9s var(--ease-standard) infinite alternate;
+}
+
+body.is-loaded .load-screen {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+@keyframes loadFrame {
+    from {
+        clip-path: inset(0 82% 0 0);
+    }
+
+    to {
+        clip-path: inset(0);
+    }
+}
+
+@keyframes loadCursor {
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes loadName {
+    from {
+        transform: translateX(-8px) skewX(-6deg);
+    }
+
+    to {
+        transform: translateX(0) skewX(-6deg);
+    }
+}
+
 ::-webkit-scrollbar {
     width: 10px;
 }
