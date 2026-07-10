@@ -185,13 +185,13 @@ window.portfolioI18n = (() => {
         const meta = {
             es: {
                 title: "Marlon Reina | Desarrollador de Software Java & Spring Boot",
-                description: "Portafolio de Marlon Estiben Reina Dinas, desarrollador de software enfocado en Java, Spring Boot, microservicios, diseno de APIs, PHP, ASP.NET y sistemas backend empresariales.",
+                description: "Portafolio de Marlon Reina, desarrollador de software Java enfocado en Spring Boot, APIs, microservicios e integraciones empresariales.",
                 ogTitle: "Marlon Reina | Desarrollador de Software Java",
                 ogDescription: "Desarrollador de software que construye APIs escalables, servicios Spring Boot y sistemas backend empresariales."
             },
             en: {
                 title: "Marlon Reina | Java Backend Developer & Spring Boot Developer",
-                description: "Portfolio of Marlon Estiben Reina Dinas, a software Developer focused on Java, Spring Boot, microservices, API design, PHP, ASP.NET, and enterprise backend systems.",
+                description: "Portfolio of Marlon Reina, Java software developer focused on Spring Boot, APIs, microservices, and enterprise integrations.",
                 ogTitle: "Marlon Reina | Java Backend Developer",
                 ogDescription: "Software Developer building scalable APIs, Spring Boot services, and enterprise backend systems."
             }
