@@ -46,6 +46,10 @@
     transform: translateY(-3px);
 }
 
+.project-card-app {
+    box-shadow: inset 3px 0 0 var(--color-accent);
+}
+
 .projects-loading {
     margin: 0;
     padding: 28px;
@@ -83,6 +87,29 @@
     display: grid;
     gap: var(--space-5);
     align-content: start;
+}
+
+.project-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.project-badge {
+    border: 1px solid rgba(var(--color-accent-rgb), 0.36);
+    border-radius: 999px;
+    padding: 6px 10px;
+    color: var(--color-accent);
+    background: rgba(var(--color-accent-rgb), 0.08);
+    font-size: 0.68rem;
+    font-weight: 900;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.project-badge-release {
+    color: var(--color-text);
+    background: rgba(255, 255, 255, 0.06);
 }
 
 .project-card h3 {
@@ -214,6 +241,7 @@
 
 .project-stack span,
 .project-actions a,
+.project-download-menu summary,
 .project-confidential {
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 999px;
@@ -225,6 +253,7 @@
 }
 
 .project-actions a,
+.project-download-menu summary,
 .project-confidential {
     display: inline-flex;
     align-items: center;
@@ -243,10 +272,43 @@
 }
 
 .project-actions a:hover,
-.project-actions a:focus-visible {
+.project-actions a:focus-visible,
+.project-download-menu summary:hover,
+.project-download-menu summary:focus-visible {
     border-color: var(--color-accent);
     background: var(--color-accent-soft);
     color: var(--color-text);
+}
+
+.project-download-menu {
+    position: relative;
+}
+
+.project-download-menu summary {
+    cursor: pointer;
+    list-style: none;
+}
+
+.project-download-menu summary::-webkit-details-marker {
+    display: none;
+}
+
+.project-download-options {
+    position: absolute;
+    z-index: 5;
+    top: calc(100% + 8px);
+    left: 0;
+    display: grid;
+    min-width: 140px;
+    gap: 6px;
+    padding: 8px;
+    border: 1px solid var(--color-subtle);
+    background: var(--color-bg);
+}
+
+.project-download-options a {
+    justify-content: center;
+    width: 100%;
 }
 
 @media (max-width: 1000px) {
@@ -287,5 +349,14 @@
 
     .project-card h3 {
         font-size: clamp(2rem, 11vw, 3.4rem);
+    }
+
+    .project-badges {
+        gap: 6px;
+    }
+
+    .project-badge {
+        padding: 5px 9px;
+        font-size: 0.64rem;
     }
 }

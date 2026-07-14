@@ -1,38 +1,4 @@
 {
-  "plantilla_comentada": {
-    "_comentario": "JSON no soporta comentarios con // o /* */. Esta plantilla es un ejemplo valido para duplicar dentro del array projects.",
-    "id": "api-gestion-ordenes",
-    "numero": "05",
-    "destacado": true,
-    "categoria": "BACKEND API / SPRING BOOT",
-    "titulo": "API de Gestion de Ordenes con Spring Boot",
-    "descripcion_corta": "Servicio backend para centralizar ordenes, clientes, estados y contratos REST reutilizables en un flujo operativo trazable.",
-    "problema": "El flujo de ordenes dependia de pasos manuales, sin trazabilidad clara ni endpoints listos para integraciones futuras.",
-    "solucion": "Disene una API REST con capas de controlador, servicio, DTOs, validacion y persistencia relacional.",
-    "rol": "Backend Developer: contratos REST, arquitectura por capas, validacion, manejo de errores y flujo de datos.",
-    "tipo_involucramiento": "solo-dev",
-    "mostrar_proyecto": true,
-    "impacto": [
-      "Mejor trazabilidad de estados y operaciones clave.",
-      "Contratos REST reutilizables para nuevos consumidores.",
-      "Separacion clara entre reglas de negocio, persistencia y transporte."
-    ],
-    "decisiones_tecnicas": [
-      "DTOs para aislar contrato externo del modelo interno.",
-      "Validacion de requests antes de ejecutar logica de negocio.",
-      "Estructura preparada para documentacion y despliegue."
-    ],
-    "stack": ["Java", "Spring Boot", "REST API", "JPA", "SQL", "Docker"],
-    "links": {
-      "repo": null,
-      "sitio": null,
-      "conversar": "#contact"
-    },
-    "mostrar_sitio": false,
-    "confidencial": false,
-    "empresa_contexto": "Proyecto independiente",
-    "empresa_url": null
-  },
   "translations": {
     "en": {
       "pretaporter-landing-page": {
@@ -44,22 +10,101 @@
         "rol": "Full-Stack Developer",
         "impacto": [
           "Centralized customer inquiries through a unified contact system.",
-            "Implemented visitor, interaction, and social media click tracking."
+          "Implemented visitor, interaction, and social media click tracking."
         ],
         "decisiones_tecnicas": [
-            "Adopted a modular monolithic architecture to simplify maintenance and deployment.",
-            "Used Thymeleaf for server-side rendering to improve SEO and reduce frontend complexity.",
-            "Implemented a custom analytics module instead of relying solely on third-party tracking tools."
+          "Adopted a modular monolithic architecture to simplify maintenance and deployment.",
+          "Used Thymeleaf for server-side rendering to improve SEO and reduce frontend complexity.",
+          "Implemented a custom analytics module instead of relying solely on third-party tracking tools."
         ],
         "empresa_contexto": "Independent project",
         "empresa_url": null
-      }
+      },
+      "local-invoices": {
+      "categoria": "DESKTOP / JAVA",
+      "titulo": "Local Invoices",
+      "descripcion_corta": "Local desktop application for managing companies, issuing invoices, and storing data persistently without relying on external services.",
+      "problema": "A professional desktop solution was needed to manually register companies, manage invoices with multiple line items, and store all information locally through a modern interface designed for offline use.",
+      "solucion": "Designed and developed a Java desktop application with a well-structured architecture, persistent local database, editable company management, dynamic invoice creation with multiple line items, modern UI enhancements, and packaging prepared for installer distribution.",
+      "rol": "Full-Stack Developer",
+      "impacto": [
+        "Enabled local company registration and management without preloaded data.",
+        "Provided persistent data storage through a local database for continuous offline use.",
+        "Improved the user experience with a modern, responsive, and consistent desktop interface."
+      ],
+      "decisiones_tecnicas": [
+        "Built with Java and Maven to provide a portable and maintainable codebase.",
+        "Used SQLite for lightweight local persistence and simplified installation.",
+        "Applied separation of responsibilities to support future scalability and layered architecture."
+      ],
+      "empresa_contexto": "Local Invoices",
+      "empresa_url": null
+    }
     }
   },
   "projects": [
     {
+      "id": "local-invoices",
+      "numero": "05",
+      "destacado": true,
+      "categoria": "DESKTOP / JAVA /",
+      "titulo": "Local Invoices",
+      "descripcion_corta": "Aplicación de escritorio local para gestionar empresas, emitir facturas y conservar datos de forma persistente sin depender de servicios externos.",
+      "problema": "Se necesitaba una solución de escritorio profesional para registrar empresas manualmente, administrar facturas con múltiples ítems y mantener la información almacenada localmente, con una interfaz moderna y preparada para uso offline.",
+      "solucion": "Diseñé y desarrollé una aplicación de escritorio en Java con arquitectura organizada, base de datos local persistente, gestión editable de empresas, creación de facturas con ítems dinámicos, ajustes visuales y empaquetado pensado para distribución como instalador.",
+      "rol": "Desarrollador Full Stack",
+      "tipo_involucramiento": "solo-dev",
+      "mostrar_proyecto": true,
+      "proyecto_personal": true,
+      "es_app": true,
+      "release_automatica": true,
+      "release_repo": "ReinaMarlon/local-invoices",
+      "ultima_release": "",
+      "impacto": [
+        "Registro y administración local de empresas sin datos precargados.",
+        "Persistencia de información en base de datos local para uso continuo.",
+        "Mejora de la experiencia de usuario con una interfaz moderna, responsive y consistente."
+      ],
+      "decisiones_tecnicas": [
+        "Uso de Java y Maven para una base portable y fácil de mantener.",
+        "Persistencia con SQLite para simplificar instalación y operación local.",
+        "Separación de responsabilidades para dejar lista la app para evolucionar por capas."
+      ],
+      "stack": [
+        "Java 21",
+        "JavaFX",
+        "Maven",
+        "SQLite",
+        "Git",
+        "GitHub",
+        "JPackage",
+        "JLink"
+      ],
+      "links": {
+        "repo": "https://github.com/ReinaMarlon/local-invoices",
+        "sitio": null,
+        "conversar": "#contact"
+      },
+      "mostrar_sitio": false,
+      "confidencial": false,
+      "mostrar_descargas": true,
+      "descargas_automaticas": true,
+      "descargas": [
+        {
+          "label": "EXE",
+          "url": ""
+        },
+        {
+          "label": "JAR",
+          "url": ""
+        }
+      ],
+      "empresa_contexto": "Local Invoices",
+      "empresa_url": null
+    },
+    {
       "id": "pretaporter-landing-page",
-      "numero": "04",
+      "numero": "06",
       "destacado": true,
       "categoria": "FULLSTACK / JAVA / SPRING BOOT",
       "titulo": "Landing corporativa para Prêt à Porter",
@@ -69,6 +114,11 @@
       "rol": "Desarrollador Full Stack",
       "tipo_involucramiento": "Freelance",
       "mostrar_proyecto": false,
+      "proyecto_personal": false,
+      "es_app": false,
+      "release_automatica": false,
+      "release_repo": null,
+      "ultima_release": null,
       "impacto": [
         "Centralización de los canales de contacto de la empresa.",
         "Obtención de métricas de visitas, clics y formularios enviados."
@@ -97,6 +147,9 @@
         "conversar": "#contact"
       },
       "mostrar_sitio": false,
+      "mostrar_descargas": false,
+      "descargas_automaticas": false,
+      "descargas": [],
       "confidencial": false,
       "empresa_contexto": "Prêt à Porter",
       "empresa_url": null

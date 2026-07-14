@@ -22,6 +22,11 @@ window.addEventListener("load", async () => {
 
     const normalizeNumber = (value) => Number.parseInt(String(value).replace(/\D/g, ""), 10) || 0;
     const isVisibleProject = (project) => project?.mostrar_proyecto !== false;
+    const normalizeRelease = (value) => String(value || "").replace(/^v|^ver\.?/i, "");
+    const getAssetLabel = (name = "") => {
+        const extension = String(name).split(".").pop()?.toUpperCase();
+        return extension && extension !== name.toUpperCase() ? extension : name;
+    };
 
     const updateProjectsCount = (projects) => {
         if (projectsCount) {
@@ -43,6 +48,25 @@ window.addEventListener("load", async () => {
     const renderStack = (stack = []) => stack
         .map((item) => `<span>${escapeHtml(item)}</span>`)
         .join("");
+
+    const renderProjectBadges = (project) => {
+        const badges = [];
+        const release = normalizeRelease(project.ultima_release);
+
+        if (project.proyecto_personal) {
+            badges.push(`<span class="project-badge project-badge-personal">${t("projects.personal")}</span>`);
+        }
+
+        if (project.es_app) {
+            badges.push(`<span class="project-badge project-badge-app">${t("projects.app")}</span>`);
+        }
+
+        if (project.es_app && release) {
+            badges.push(`<span class="project-badge project-badge-release">ver.${escapeHtml(release)}</span>`);
+        }
+
+        return badges.length ? `<div class="project-badges">${badges.join("")}</div>` : "";
+    };
 
     const renderRepoAction = (project) => {
         if (project.confidencial) {
@@ -79,6 +103,50 @@ window.addEventListener("load", async () => {
         `;
     };
 
+    const getDownloads = (project) => {
+        if (!project.mostrar_descargas || !Array.isArray(project.descargas)) {
+            return [];
+        }
+
+        return project.descargas
+            .map((item) => typeof item === "string" ? { label: t("projects.download"), url: item } : item)
+            .filter((item) => item?.url && item.url !== "#");
+    };
+
+    const renderDownloadAction = (project) => {
+        const downloads = getDownloads(project);
+
+        if (!downloads.length) {
+            return "";
+        }
+
+        if (downloads.length === 1) {
+            const download = downloads[0];
+            return `
+                <a href="${escapeHtml(download.url)}" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-solid fa-download" aria-hidden="true"></i>
+                    <span>${t("projects.download")}</span>
+                </a>
+            `;
+        }
+
+        return `
+            <details class="project-download-menu">
+                <summary>
+                    <i class="fa-solid fa-download" aria-hidden="true"></i>
+                    <span>${t("projects.download")}</span>
+                </summary>
+                <div class="project-download-options">
+                    ${downloads.map((download) => `
+                        <a href="${escapeHtml(download.url)}" target="_blank" rel="noopener noreferrer">
+                            ${escapeHtml(download.label || t("projects.download"))}
+                        </a>
+                    `).join("")}
+                </div>
+            </details>
+        `;
+    };
+
     const renderTalkAction = (project) => {
         if (!project.links?.conversar) {
             return "";
@@ -112,6 +180,37 @@ window.addEventListener("load", async () => {
         ...(projectTranslations[getLang()]?.[project.id] || {})
     });
 
+    const fetchLatestRelease = async (project) => {
+        if (!project.es_app || !project.release_automatica || !project.release_repo) {
+            return project;
+        }
+
+        try {
+            const response = await fetch(`https://api.github.com/repos/${project.release_repo}/releases/latest`);
+
+            if (!response.ok) {
+                return project;
+            }
+
+            const release = await response.json();
+            const releaseAssets = project.descargas_automaticas
+                ? (release.assets || []).map((asset) => ({
+                    label: getAssetLabel(asset.name),
+                    url: asset.browser_download_url
+                })).filter((asset) => asset.url)
+                : [];
+
+            return {
+                ...project,
+                ultima_release: normalizeRelease(release.tag_name) || project.ultima_release,
+                descargas: releaseAssets.length ? releaseAssets : project.descargas
+            };
+        } catch (error) {
+            console.warn(`No se pudo cargar la release de ${project.id}`, error);
+            return project;
+        }
+    };
+
     const renderProject = (projectData) => {
         const project = localizeProject(projectData);
         const safeId = escapeHtml(project.id);
@@ -123,13 +222,14 @@ window.addEventListener("load", async () => {
             : (project.empresa_contexto || t("projects.independent"));
 
         return `
-            <article class="project-card" id="project-${safeId}" aria-labelledby="project-${safeId}-title" data-involvement="${escapeHtml(involvement)}">
+            <article class="project-card ${project.es_app ? "project-card-app" : ""} ${project.proyecto_personal ? "project-card-personal" : ""}" id="project-${safeId}" aria-labelledby="project-${safeId}-title" data-involvement="${escapeHtml(involvement)}">
                 <div class="project-meta">
                     <span>${project.destacado ? t("projects.featured") : escapeHtml(project.numero)}</span>
                     <span>${escapeHtml(project.categoria)}</span>
                 </div>
 
                 <div class="project-intro">
+                    ${renderProjectBadges(project)}
                     <h3 id="project-${safeId}-title">${escapeHtml(project.titulo)}</h3>
                     <p>${escapeHtml(project.descripcion_corta)}</p>
                     <div class="project-context">
@@ -175,6 +275,7 @@ window.addEventListener("load", async () => {
                 <div class="project-actions">
                     ${renderRepoAction(project)}
                     ${renderSiteAction(project)}
+                    ${renderDownloadAction(project)}
                     ${renderTalkAction(project)}
                 </div>
             </article>
@@ -213,7 +314,7 @@ window.addEventListener("load", async () => {
         }
 
         const data = await response.json();
-        cachedProjects = Array.isArray(data.projects) ? data.projects : [];
+        cachedProjects = await Promise.all((Array.isArray(data.projects) ? data.projects : []).map(fetchLatestRelease));
         projectTranslations = data.translations || {};
         updateProjectsCount(cachedProjects);
         renderProjects(cachedProjects);
