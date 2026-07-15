@@ -189,10 +189,21 @@
                         <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
                         <span data-i18n="hero.cta.contact">Contacto</span>
                     </a>
-                    <a class="button button-secondary" href="#contact" aria-label="Solicitar CV por contacto">
-                        <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
-                        CV
-                    </a>
+                    <details class="cv-dropdown">
+                        <summary class="button button-secondary" aria-label="Descargar CV">
+                            <i class="fa-solid fa-file-arrow-down" aria-hidden="true"></i>
+                            CV
+                            <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                        </summary>
+                        <div class="cv-options">
+                            <a href="assets/resources/Marlon_Reina%20-%20CV%20ES.pdf" download>
+                                <span data-i18n="hero.cv.spanish">Español</span>
+                            </a>
+                            <a href="assets/resources/Marlon%20Reina%20-%20CV%20EN.pdf" download>
+                                <span data-i18n="hero.cv.english">Ingles</span>
+                            </a>
+                        </div>
+                    </details>
                     <a class="button button-ghost" href="#projects">
                         <i class="fa-solid fa-layer-group" aria-hidden="true"></i>
                         <span data-i18n="hero.cta.projects">Proyectos</span>

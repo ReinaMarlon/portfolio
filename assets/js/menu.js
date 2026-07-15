@@ -1,5 +1,6 @@
 window.addEventListener("load", () => {
     const menu = document.querySelector(".menu-primary");
+    const siteHeader = document.querySelector(".site-header");
     const menus = Array.from(document.querySelectorAll(".menu"));
     const sectionLinks = Array.from(document.querySelectorAll(".menu-link[data-section]"));
     const languageMenu = document.querySelector(".language-menu");
@@ -43,7 +44,8 @@ window.addEventListener("load", () => {
     const scheduleCollapse = () => {
         window.clearTimeout(collapseTimer);
         collapseTimer = window.setTimeout(() => {
-            const isInteracting = menus.some((item) => item.matches(":hover") || item.contains(document.activeElement));
+            const isInteracting = siteHeader?.matches(":hover")
+                || menus.some((item) => item.contains(document.activeElement));
 
             if (!isInteracting) {
                 setExpanded(false);
@@ -115,6 +117,10 @@ window.addEventListener("load", () => {
         item.addEventListener("focusin", () => setExpanded(true));
         item.addEventListener("focusout", scheduleCollapse);
     });
+
+    siteHeader?.addEventListener("pointerenter", () => setExpanded(true));
+    siteHeader?.addEventListener("pointermove", () => setExpanded(true));
+    siteHeader?.addEventListener("pointerleave", scheduleCollapse);
 
     languageTrigger?.addEventListener("click", (event) => {
         event.stopPropagation();
