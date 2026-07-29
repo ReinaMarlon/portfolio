@@ -14,7 +14,7 @@
           "company": "Globant",
           "description": "Desarrollo de contratos de API con enfoque contract-first, incluyendo herramientas propias para validar cumplimiento de especificaciones OpenAPI/Swagger en proyectos empresariales.",
           "impact": [
-            "Disene un plugin de Maven personalizado para validar contratos de API JSON/YAML contra especificaciones OpenAPI/Swagger.",
+            "Diseñé un plugin de Maven personalizado para validar contratos de API JSON/YAML contra especificaciones OpenAPI/Swagger.",
             "Aplique Java Development y practicas de ingenieria en un entorno de proyectos empresariales de gran escala."
           ]
         },
@@ -87,7 +87,7 @@
           "company": "CCED - Centro de Capacitacion y Educacion Dirigida",
           "description": "Desarrollo end-to-end del sitio institucional y de software interno de gestion academica y financiera.",
           "impact": [
-            "Disene e implemente el sitio web oficial de CCED con cursos, programas, informacion legal, FAQs y recursos para empresas.",
+            "Diseñé e implemente el sitio web oficial de CCED con cursos, programas, informacion legal, FAQs y recursos para empresas.",
             "Desarrolle software institucional para gestion de estudiantes, pagos, notas y asistencia."
           ]
         },
